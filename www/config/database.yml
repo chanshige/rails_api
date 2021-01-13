@@ -43,7 +43,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: www_test
+  database: rails_api
+  username: rails_api_user
+  password: secret
+  host: rails_api_app_pgsqld
+  port: 5432
 
 production:
   <<: *default
