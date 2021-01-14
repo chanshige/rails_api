@@ -1,0 +1,17 @@
+{
+  "$id": "greeting.json",
+  "$schema": "http://json-schema.org/draft-04/hyper-schema",
+  "title": "Greeting",
+  "strictProperties": true,
+  "type": [
+    "object"
+  ],
+  "required": [
+    "greeting"
+  ],
+  "properties": {
+    "greeting": {
+      "type": "string"
+    }
+  }
+}
