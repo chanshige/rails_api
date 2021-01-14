@@ -14,5 +14,29 @@
       "type": "string"
     }
   },
+  "definitions": {
+    "greeting": {
+      "description": "greet",
+      "readOnly": true,
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "links": [
+    {
+      "title": "Greeting",
+      "description": "greet ",
+      "href": "/greeting/{name}",
+      "method": "GET",
+      "rel": "self",
+      "schema": {
+        "$ref": "#"
+      },
+      "targetSchema": {
+        "$ref": "#"
+      }
+    }
+  ],
   "id": "schema/greeting"
 }
