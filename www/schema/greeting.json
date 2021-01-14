@@ -13,5 +13,6 @@
     "greeting": {
       "type": "string"
     }
-  }
+  },
+  "id": "schema/greeting"
 }

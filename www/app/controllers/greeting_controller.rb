@@ -1,6 +1,6 @@
 class GreetingController < ApplicationController
   def index
-    expires_in 1.hours, public: true
+    expires_in 10.minutes, public: true, stale_while_revalidate: 60.seconds
     name = params[:name] || "Rails API"
 
     body = { greeting: sprintf("Hello! %s.", name),
@@ -12,7 +12,7 @@ class GreetingController < ApplicationController
       render content_type: "application/hal+json", json: body
     rescue => e
       logger.error e
-      render content_type: "application/vnd.error+json", json: { message: e.message }
+      render content_type: "application/vnd.error+json", json: { message: e.message }, status: 500
     end
   end
 end
